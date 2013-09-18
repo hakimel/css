@@ -1,0 +1,183 @@
+html, body {
+  margin: 10px;
+  text-align: center;
+  font-family: Helvetica, sans-serif; }
+
+p {
+  display: inline-block;
+  color: #333;
+  vertical-align: middle;
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.6; }
+  p a {
+    color: #333;
+    padding: 2px 4px;
+    border: 2px solid #aaa;
+    border-radius: 2px;
+    text-decoration: none; }
+    p a:hover {
+      border-color: #666;
+      color: #000; }
+
+.credits {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 14px; }
+  .credits > * {
+    vertical-align: middle;
+    margin-left: 10px; }
+  .credits a {
+    padding: 4px 6px;
+    color: #333;
+    border: 2px solid #aaa;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px; }
+    .credits a:hover {
+      border-color: #666;
+      color: #000; }
+
+.animation {
+  display: inline-block;
+  position: relative;
+  width: 460px;
+  height: 377px;
+  margin: 0 auto;
+  vertical-align: middle; }
+  .animation .device {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    background: #111;
+    -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .animation .device .phone-home-button,
+    .animation .device .tablet-home-button {
+      position: absolute;
+      border-radius: 50%;
+      background: #444;
+      opacity: 0;
+      z-index: 1;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+    .animation .device .phone-home-button {
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      right: 11px;
+      top: 50%; }
+    .animation .device .tablet-home-button {
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      bottom: 7px;
+      left: 50%; }
+    .animation .device .screen-stand {
+      position: absolute;
+      width: 100%;
+      margin-left: -10px;
+      margin-top: -1px;
+      top: 60%;
+      opacity: 0;
+      z-index: 1;
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -ms-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out; }
+      .animation .device .screen-stand .leg {
+        position: absolute;
+        width: 12px;
+        height: 16px;
+        left: 50%;
+        top: 0;
+        margin-left: -6px;
+        background: #111; }
+      .animation .device .screen-stand .foot {
+        position: absolute;
+        width: 120px;
+        height: 4px;
+        left: 50%;
+        top: 15px;
+        margin-left: -60px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        background: #111; }
+    .animation .device .display {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #34495e;
+      z-index: 3; }
+      .animation .device .display div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        white-space: nowrap;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+        .animation .device .display div div {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 50%;
+          margin-top: -14px;
+          font-size: 1.1em;
+          text-align: center;
+          color: #fff; }
+          .animation .device .display div div em {
+            font-weight: bold; }
+      .animation .device .display .slide1 {
+        background: #34495e; }
+      .animation .device .display .slide2 {
+        background: #16a085; }
+      .animation .device .display .slide3 {
+        background: #3498db; }
+  .animation[data-animation-step="1"] .device {
+    width: 70%;
+    height: 60%;
+    padding: 10px;
+    border-radius: 4px; }
+    .animation[data-animation-step="1"] .device .slide1 {
+      left: 0%; }
+    .animation[data-animation-step="1"] .device .screen-stand {
+      opacity: 1;
+      top: 100%; }
+  .animation[data-animation-step="2"] .device {
+    width: 45%;
+    height: 72%;
+    padding: 24px;
+    border-radius: 10px; }
+    .animation[data-animation-step="2"] .device .slide1 {
+      left: -100%; }
+    .animation[data-animation-step="2"] .device .slide2 {
+      left: 0%; }
+    .animation[data-animation-step="2"] .device .tablet-home-button {
+      opacity: 1; }
+  .animation[data-animation-step="3"] .device {
+    width: 54%;
+    height: 38%;
+    padding: 10px 36px;
+    border-radius: 6px; }
+    .animation[data-animation-step="3"] .device .slide1,
+    .animation[data-animation-step="3"] .device .slide2 {
+      left: -100%; }
+    .animation[data-animation-step="3"] .device .slide3 {
+      left: 0%; }
+    .animation[data-animation-step="3"] .device .phone-home-button {
+      opacity: 1; }

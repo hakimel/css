@@ -1,0 +1,259 @@
+
+$width: 460px;
+$height: 377px;
+
+$deviceTransitionDuration: 0.4s;
+
+$screenWidth: 70%;
+$screenHeight: 60%;
+
+$tabletWidth: 45%;
+$tabletHeight: 72%;
+
+$phoneWidth: 54%;
+$phoneHeight: 38%;
+
+@mixin transition( $value ) {
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	    -ms-transition: $value;
+	        transition: $value;
+}
+
+@mixin transform( $value ) {
+	-webkit-transform: $value;
+	   -moz-transform: $value;
+	    -ms-transform: $value;
+	        transform: $value;
+}
+
+html, body {
+	margin: 10px;
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+}
+
+p {
+	display: inline-block;
+	color: #333;
+	vertical-align: middle;
+	font-size: 20px;
+	text-align: right;
+	line-height: 1.6;
+
+	a {
+		color: #333;
+		padding: 2px 4px;
+		border: 2px solid #aaa;
+		border-radius: 2px;
+		text-decoration: none;
+
+		&:hover {
+			border-color: #666;
+			color: #000;
+		}
+	}
+}
+
+.credits {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 14px;
+
+	&>* {
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+
+	a {
+		padding: 4px 6px;
+		color: #333;
+		border: 2px solid #aaa;
+		border-radius: 2px;
+		text-decoration: none;
+		font-size: 14px;
+
+		&:hover {
+			border-color: #666;
+			color: #000;
+		}
+	}
+}
+
+.animation {
+	display: inline-block;
+	position: relative;
+	width: $width;
+	height: $height;
+	margin: 0 auto;
+	vertical-align: middle;
+
+	.device {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 50%;
+		top: 50%;
+		background: #111;
+
+		@include transition( all $deviceTransitionDuration cubic-bezier(0.175, 0.885, 0.320, 1.275) );
+		@include transform( translate(-50%, -50%) );
+
+		.phone-home-button,
+		.tablet-home-button {
+			position: absolute;
+			border-radius: 50%;
+			background: #444;
+			opacity: 0;
+			z-index: 1;
+
+			@include transition( all $deviceTransitionDuration ease );
+		}
+
+		.phone-home-button {
+			width: 16px;
+			height: 16px;
+			margin-top: -8px;
+			right: 11px;
+			top: 50%;
+		}
+
+		.tablet-home-button {
+			width: 12px;
+			height: 12px;
+			margin-left: -6px;
+			bottom: 7px;
+			left: 50%;
+		}
+
+		.screen-stand {
+			position: absolute;
+			width: 100%;
+			margin-left: -10px;
+			margin-top: -1px;
+			top: 60%;
+			opacity: 0;
+			z-index: 1;
+
+			.leg {
+				position: absolute;
+				width: 12px;
+				height: 16px;
+				left: 50%;
+				top: 0;
+				margin-left: -6px;
+
+				background: #111;
+			}
+
+			.foot {
+				position: absolute;
+				width: 120px;
+				height: 4px;
+				left: 50%;
+				top: 15px;
+				margin-left: -60px;
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+
+				background: #111;
+			}
+
+			@include transition( all $deviceTransitionDuration ease-out );
+		}
+
+		.display {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background: #34495e;
+			z-index: 3;
+
+			div {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 100%;
+				white-space: nowrap;
+
+				@include transition( all $deviceTransitionDuration ease );
+
+				div {
+					position: absolute;
+					width: 100%;
+					left: 0;
+					top: 50%;
+					margin-top: -14px;
+					font-size: 1.1em;
+					text-align: center;
+					color: #fff;
+
+					em {
+						font-weight: bold;
+					}
+				}
+			}
+
+			.slide1 { background: #34495e; }
+			.slide2 { background: #16a085; }
+			.slide3 { background: #3498db; }
+		}
+	}
+
+	&[data-animation-step="1"] .device {
+		width: $screenWidth;
+		height: $screenHeight;
+		padding: 10px;
+		border-radius: 4px;
+
+		.slide1 {
+			left: 0%;
+		}
+
+		.screen-stand {
+			opacity: 1;
+			top: 100%;
+		}
+	}
+
+	&[data-animation-step="2"] .device {
+		width: $tabletWidth;
+		height: $tabletHeight;
+		padding: 24px;
+		border-radius: 10px;
+
+		.slide1 {
+			left: -100%;
+		}
+
+		.slide2 {
+			left: 0%;
+		}
+
+		.tablet-home-button {
+			opacity: 1;
+		}
+	}
+
+	&[data-animation-step="3"] .device {
+		width: $phoneWidth;
+		height: $phoneHeight;
+		padding: 10px 36px;
+		border-radius: 6px;
+
+		.slide1,
+		.slide2 {
+			left: -100%;
+		}
+
+		.slide3 {
+			left: 0%;
+		}
+
+		.phone-home-button {
+			opacity: 1;
+		}
+	}
+}
