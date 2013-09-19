@@ -55,32 +55,6 @@ p {
 	}
 }
 
-.credits {
-	position: absolute;
-	right: 20px;
-	bottom: 20px;
-	font-size: 14px;
-
-	&>* {
-		vertical-align: middle;
-		margin-left: 10px;
-	}
-
-	a {
-		padding: 4px 6px;
-		color: #333;
-		border: 2px solid #aaa;
-		border-radius: 2px;
-		text-decoration: none;
-		font-size: 14px;
-
-		&:hover {
-			border-color: #666;
-			color: #000;
-		}
-	}
-}
-
 .animation {
 	display: inline-block;
 	position: relative;

@@ -1,0 +1,143 @@
+$size: 50px;
+$thickness: 5px;
+$angle: 40deg;
+$angleHover: 30deg;
+$angleActive: 25deg;
+
+@mixin transition( $value ) {
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	    -ms-transition: $value;
+	        transition: $value;
+}
+
+@mixin transform( $value ) {
+	-webkit-transform: $value;
+	   -moz-transform: $value;
+	    -ms-transform: $value;
+	        transform: $value;
+}
+
+@mixin transform-origin( $value ) {
+	-webkit-transform-origin: $value;
+	   -moz-transform-origin: $value;
+	    -ms-transform-origin: $value;
+	        transform-origin: $value;
+}
+
+@mixin arrowTransform( $angle, $x: 0, $y: 0 ) {
+	i:first-child {
+		@include transform( translate( $x, $y ) rotate( $angle ) );
+	}
+
+	i:last-child {
+		@include transform( translate( $x, -$y ) rotate( -$angle ) );
+	}
+}
+
+body {
+	background: #33ab83;
+	font-family: Helvetica, sans-serif;
+}
+
+button {
+	-webkit-appearance: none;
+	background: transparent;
+	border: 0;
+}
+
+.paginate {
+	position: relative;
+	margin: 10px;
+	width: $size;
+	height: $size;
+	cursor: pointer;
+	@include transform( translate3d(0,0,0) ); // fixes flicker in webkit
+
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	-webkit-filter: drop-shadow( 0 2px 0px rgba(0,0,0,0.2) );
+
+	i {
+		position: absolute;
+		top: 40%;
+		left: 0;
+		width: $size;
+		height: $thickness;
+		border-radius: $thickness / 2;
+		background: #fff;
+
+		@include transition( all 0.15s ease );
+	}
+
+	&.left {
+		right: 58%;
+
+		i {
+			@include transform-origin( 0% 50% );
+		}
+
+		@include arrowTransform( $angle, 0, -1px );
+
+		&:hover {
+			@include arrowTransform( $angleHover, 0, -1px );
+		}
+
+		&:active {
+			@include arrowTransform( $angleActive, 1px, -1px );
+		}
+
+		&[data-state=disabled] {
+			@include arrowTransform( 0deg, -5px, 0 );
+
+			&:hover {
+				@include arrowTransform( 0deg, -5px, 0 );
+			}
+		}
+	}
+
+	&.right {
+		left: 58%;
+
+		i {
+			@include transform-origin( 100% 50% );
+		}
+
+		@include arrowTransform( $angle, 0, 1px );
+
+		&:hover {
+			@include arrowTransform( $angleHover, 0, 1px );
+		}
+
+		&:active {
+			@include arrowTransform( $angleActive, 1px, 1px );
+		}
+
+		&[data-state=disabled] {
+			@include arrowTransform( 0deg, 5px, 0 );
+
+			&:hover {
+				@include arrowTransform( 0deg, 5px, 0 );
+			}
+		}
+	}
+
+	&[data-state=disabled] {
+		opacity: 0.3;
+		cursor: default;
+	}
+}
+
+
+
+.counter {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	margin-top: -15px;
+	font-size: 30px;
+	text-shadow: 0px 2px 0px rgba( 0, 0, 0, 0.2 );
+	color: #fff;
+}

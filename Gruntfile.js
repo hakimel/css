@@ -22,7 +22,8 @@ module.exports = function(grunt) {
 		sass: {
 			main: {
 				files: {
-					'deviceloop/style.css': 'deviceloop/style.scss'
+					'device-loop/style.css': 'device-loop/style.scss',
+					'flexing-pagination/style.css': 'flexing-pagination/style.scss'
 				}
 			}
 		},

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Flexing pagination arrows</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Hakim El Hattab">
+
+		<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+
+	</head>
+
+	<body>
+
+		<p class="intro">Flexing pagination arrows</p>
+
+		<div class="counter"></div>
+
+		<button class="paginate left"><i></i><i></i></button>
+		<button class="paginate right"><i></i><i></i></button>
+
+		<script>
+
+			// basic paging logic to demo the buttons
+			var pr = document.querySelector( '.paginate.left' );
+			var pl = document.querySelector( '.paginate.right' );
+
+			pr.onclick = slide.bind( this, -1 );
+			pl.onclick = slide.bind( this, 1 );
+
+			var index = 0, total = 5;
+
+			function slide(offset) {
+			  index = Math.min( Math.max( index + offset, 0 ), total - 1 );
+
+			  document.querySelector( '.counter' ).innerHTML = ( index + 1 ) + ' / ' + total;
+
+			  pr.setAttribute( 'data-state', index === 0 ? 'disabled' : '' );
+			  pl.setAttribute( 'data-state', index === total - 1 ? 'disabled' : '' );
+			}
+
+			slide(0);
+
+		</script>
+
+		<!-- Third party scripts and sharing UI -->
+
+		<div class="credits">
+			<a href="http://twitter.com/hakimel">Follow @hakimel</a>
+			<a href="https://twitter.com/share?text=Flexing%20pagination%20arrows%20by%20@hakimel&url=http://lab.hakim.se/flexing-pagination&related=hakimel" target="_blank">Tweet this</a>
+		</div>
+
+		<style type="text/css" media="screen">
+			.intro {
+				position: absolute;
+				left: 30px;
+				bottom: 14px;
+
+				font-size: 16px;
+				color: #fff;
+			}
+
+			.credits {
+				position: absolute;
+				right: 30px;
+				bottom: 30px;
+				font-size: 15px;
+			}
+
+			.credits>* {
+				vertical-align: middle;
+				margin-left: 15px;
+			}
+
+			.credits a {
+				padding: 6px 8px;
+				color: #eee;
+				border: 2px solid #bbb;
+				border-radius: 2px;
+				text-decoration: none;
+			}
+
+			.credits a:hover {
+				border-color: #fff;
+				color: #fff;
+			}
+		</style>
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+			(function(d, t) {
+			var g = d.createElement(t),
+			    s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+			})(document, 'script');
+		</script>
+
+	</body>
+
+</html>
