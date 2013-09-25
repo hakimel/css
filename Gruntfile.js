@@ -23,7 +23,8 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'device-loop/style.css': 'device-loop/style.scss',
-					'flexing-pagination/style.css': 'flexing-pagination/style.scss'
+					'flexing-pagination/style.css': 'flexing-pagination/style.scss',
+					'cloudy-spiral/style.css': 'cloudy-spiral/style.scss'
 				}
 			}
 		},
