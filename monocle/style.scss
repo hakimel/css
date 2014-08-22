@@ -1,3 +1,4 @@
+$textColor: #fff;
 $rowWidth: 320px;
 $rowHeight: 140px;
 
@@ -12,7 +13,7 @@ html, body {
 	overflow: hidden;
 	font-family: 'Roboto', Helvetica, sans-serif;
 	background-color: #222;
-	color: #fff;
+	color: $textColor;
 }
 
 .page-scroller {
@@ -55,25 +56,38 @@ html, body {
 		width: 100%;
 		height: $rowHeight;
 		padding: 2.1em 1em;
-		background-color: #555;
 
 		* + * {
 			display: block;
 			margin-top: 0.4em;
 		}
 
+		h3 {
+			font-weight: 500;
+		}
+
 		a {
-			color: #5fcfe3;
+			display: inline-block;
+			color: $textColor;
 			text-decoration: none;
 		}
 
 		p {
-			color: #999;
+			color: rgba( $textColor, 0.7 );
 		}
 	}
 
-	li:nth-child(odd) {
-		background-color: #444;
+	li:nth-child(4n+1) {
+		background-color: #556270;
+	}
+	li:nth-child(4n+2) {
+		background-color: #4ECDC4;
+	}
+	li:nth-child(4n+3) {
+		background-color: #4e6d8a;
+	}
+	li:nth-child(4n+4) {
+		background-color: #FF6B6B;
 	}
 }
 
@@ -96,6 +110,14 @@ html, body {
 
 	li {
 		height: $rowHeight * 2;
+	}
+
+	li + li {
+		border-top: 1px solid rgba( 255, 255, 255, 0.5 );
+	}
+
+	li a {
+		border-bottom: 1px dotted #fff;
 	}
 }
 
