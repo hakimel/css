@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 					'flexing-pagination/style.css': 'flexing-pagination/style.scss',
 					'cloudy-spiral/style.css': 'cloudy-spiral/style.scss',
 					'checkwave/style.css': 'checkwave/style.scss',
-					'magnify/style.css': 'magnify/style.scss'
+					'monocle/style.css': 'monocle/style.scss'
 				}
 			}
 		},
