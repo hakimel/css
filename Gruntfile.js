@@ -31,6 +31,12 @@ module.exports = function(grunt) {
 			}
 		},
 
+		autoprefixer: {
+			dist: {
+				src: 'flexing-pagination/style.css'
+			}
+		},
+
 		jshint: {
 			options: {
 				curly: false,
@@ -75,11 +81,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
+	grunt.loadNpmTasks( 'grunt-autoprefixer' );
+	grunt.loadNpmTasks( 'grunt-sass' );
 
 	// Default task
-	grunt.registerTask( 'default', [ 'sass' ] );
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer' ] );
 
 	// Serve presentation locally
 	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );

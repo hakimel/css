@@ -8,7 +8,7 @@ html, body {
   overflow: hidden;
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: #222;
-  color: white; }
+  color: #fff; }
 
 .page-scroller {
   position: relative;
@@ -51,7 +51,7 @@ html, body {
       font-weight: 500; }
     .list li a {
       display: inline-block;
-      color: white;
+      color: #fff;
       text-decoration: none; }
     .list li p {
       color: rgba(255, 255, 255, 0.7); }

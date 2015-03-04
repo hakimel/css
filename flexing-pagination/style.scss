@@ -5,24 +5,15 @@ $angleHover: 30deg;
 $angleActive: 25deg;
 
 @mixin transition( $value ) {
-	-webkit-transition: $value;
-	   -moz-transition: $value;
-	    -ms-transition: $value;
-	        transition: $value;
+	transition: $value;
 }
 
 @mixin transform( $value ) {
-	-webkit-transform: $value;
-	   -moz-transform: $value;
-	    -ms-transform: $value;
-	        transform: $value;
+	transform: $value;
 }
 
 @mixin transform-origin( $value ) {
-	-webkit-transform-origin: $value;
-	   -moz-transform-origin: $value;
-	    -ms-transform-origin: $value;
-	        transform-origin: $value;
+	transform-origin: $value;
 }
 
 @mixin arrowTransform( $angle, $x: 0, $y: 0 ) {
