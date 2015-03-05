@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 				'/*!\n' +
 				' * http://lab.hakim.se\n' +
 				' *\n' +
-				' * Copyright (C) 2014 Hakim El Hattab, http://hakim.se\n' +
+				' * Copyright (C) 2015 Hakim El Hattab, http://hakim.se\n' +
 				' */'
 		},
 
@@ -26,14 +26,18 @@ module.exports = function(grunt) {
 					'flexing-pagination/style.css': 'flexing-pagination/style.scss',
 					'cloudy-spiral/style.css': 'cloudy-spiral/style.scss',
 					'checkwave/style.css': 'checkwave/style.scss',
-					'monocle/style.css': 'monocle/style.scss'
+					'monocle/style.css': 'monocle/style.scss',
+					'flipside/style.css': 'flipside/style.scss'
 				}
 			}
 		},
 
 		autoprefixer: {
 			dist: {
-				src: 'flexing-pagination/style.css'
+				files: [
+					{ src: 'flexing-pagination/style.css' },
+					{ src: 'flipside/style.css' }
+				]
 			}
 		},
 

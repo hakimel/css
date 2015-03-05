@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Flipside</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="viewport" content="width=460, user-scalable=no" />
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+
+	</head>
+
+	<body>
+
+		<div class="btn">
+			<div class="btn-back">
+				<p>Are you sure you want to do that?</p>
+				<button class="yes">Yes</button>
+				<button class="no">No</button>
+			</div>
+			<div class="btn-front">Delete</div>
+		</div>
+
+		<p class="description">Try clicking different sides of the button</p>
+
+		<script src="script.js"></script>
+
+		<!-- Third party scripts and sharing UI -->
+
+		<p class="project-title">Flipside – A button that seamlessly transitions into confirmation</p>
+
+		<div class="credits">
+			<a href="https://github.com/hakimel/css/tree/master/flipside">Source on GitHub</a>
+			<a href="https://twitter.com/share?text=Flipside%20-%20A%20button%20that%20seamlessly%20transitions%20into%20confirmation&url=http://lab.hakim.se/flipside&related=hakimel" target="_blank">Tweet this</a>
+			<a href="http://twitter.com/hakimel">Follow @hakimel</a>
+		</div>
+
+		<style type="text/css" media="screen">
+			.project-title {
+				position: absolute;
+				left: 25px;
+				bottom: 8px;
+
+				font-size: 16px;
+				color: #444;
+			}
+
+			.credits {
+				position: absolute;
+				right: 20px;
+				bottom: 25px;
+				font-size: 15px;
+				z-index: 20;
+				color: #444;
+				vertical-align: middle;
+			}
+
+			.credits * + * {
+				margin-left: 15px;
+			}
+
+			.credits a {
+				padding: 8px 10px;
+				color: #444;
+				border: 2px solid #999;
+				text-decoration: none;
+			}
+
+			.credits a:hover {
+				border-color: #555;
+				color: #222;
+			}
+
+			@media screen and (max-width: 1000px) {
+				.project-title {
+					display: none;
+				}
+
+				.credits {
+					width: 100%;
+					left: 0;
+					right: auto;
+					bottom: 0;
+					padding: 30px 0;
+					background: #ddd;
+					text-align: center;
+				}
+
+				.credits a {
+					display: inline-block;
+					margin-top: 7px;
+					margin-bottom: 7px;
+				}
+			}
+		</style>
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+			(function(d, t) {
+			var g = d.createElement(t),
+			    s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+			})(document, 'script');
+		</script>
+
+	</body>
+
+</html>

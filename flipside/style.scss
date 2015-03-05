@@ -1,0 +1,161 @@
+$transition-duration: 0.8s;
+$transition-easing: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$bounce-easing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$closed-width: 200px;
+$closed-height: 80px;
+$opened-width: 400px;
+$opened-height: 160px;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	user-select: none;
+}
+
+body {
+	display: flex;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-size: 18px;
+	perspective: 1000px;
+	background-color: #f5f5f5;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.description {
+	margin-top: 50px;
+	text-align: center;
+	color: #999;
+	transition: opacity 0.3s ease;
+}
+
+.description a {
+	color: #4A9DF6;
+	text-decoration: none;
+}
+
+.btn.is-open ~ .description {
+	opacity: 0;
+}
+
+.btn {
+	display: block;
+	position: relative;
+	width: $closed-width;
+	height: $closed-height;
+	transition: width $transition-duration $transition-easing,
+				height $transition-duration $transition-easing,
+				transform $transition-duration $bounce-easing;
+	transform-style: preserve-3d;
+	transform-origin: 50% 50%;
+	text-align: center;
+}
+
+.btn-front {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: $closed-height;
+	background-color: #F44336;
+	color: #fff;
+	cursor: pointer;
+	backface-visibility: hidden;
+	-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+	transition: background 0.15s ease,
+							line-height $transition-duration $transition-easing;
+
+	&:hover {
+		background-color: lighten(#F44336, 10%);
+	}
+}
+
+.btn-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	color: #222;
+	transform: translateZ(-1px) rotateX(180deg);
+	overflow: hidden;
+	transition: box-shadow $transition-duration ease;
+
+	p {
+		margin-top: 27px;
+		margin-bottom: 25px;
+	}
+
+	button {
+		padding: 12px 20px;
+		width: 30%;
+		margin: 0 5px;
+		background-color: transparent;
+		border: 0;
+		border-radius: 2px;
+		font-size: 1em;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+		transition: background 0.15s ease;
+	}
+
+	button:focus {
+		outline: 0;
+	}
+
+	button.yes {
+		background-color: #2196F3;
+		color: #fff;
+
+		&:hover {
+			background-color: lighten(#2196F3, 10%);
+		}
+	}
+
+	button.no {
+		color: #2196F3;
+
+		&:hover {
+			background-color: #ddd;
+		}
+	}
+}
+
+.btn[data-direction="left"] .btn-back,
+.btn[data-direction="right"] .btn-back {
+	transform: translateZ(-1px) rotateY(180deg);
+}
+
+.btn.is-open {
+	width: $opened-width;
+	height: $opened-height;
+
+	.btn-front {
+		pointer-events: none;
+		line-height: $opened-height;
+	}
+
+	.btn-back {
+		box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+	}
+}
+
+.btn[data-direction="top"].is-open {
+	transform: rotateX(180deg);
+}
+
+.btn[data-direction="right"].is-open {
+	transform: rotateY(180deg);
+}
+
+.btn[data-direction="bottom"].is-open {
+	transform: rotateX(-180deg);
+}
+
+.btn[data-direction="left"].is-open {
+	transform: rotateY(-180deg);
+}

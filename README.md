@@ -6,5 +6,6 @@ Live demos:
 - Device Loop http://lab.hakim.se/device-loop/
 - Checkwave http://lab.hakim.se/checkwave/
 - Monocle List http://lab.hakim.se/monocle/
+- Flipside http://lab.hakim.se/flipside/
 
-Copyright (C) 2014 Hakim El Hattab, http://hakim.se
+Copyright (C) 2015 Hakim El Hattab, http://hakim.se
