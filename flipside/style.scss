@@ -80,7 +80,7 @@ body {
 	height: 100%;
 	background-color: #eee;
 	color: #222;
-	transform: translateZ(-1px) rotateX(180deg);
+	transform: translateZ(-2px) rotateX(180deg);
 	overflow: hidden;
 	transition: box-shadow $transition-duration ease;
 
@@ -127,7 +127,7 @@ body {
 
 .btn[data-direction="left"] .btn-back,
 .btn[data-direction="right"] .btn-back {
-	transform: translateZ(-1px) rotateY(180deg);
+	transform: translateZ(-2px) rotateY(180deg);
 }
 
 .btn.is-open {

@@ -83,8 +83,8 @@ body {
   height: 100%;
   background-color: #eee;
   color: #222;
-  -webkit-transform: translateZ(-1px) rotateX(180deg);
-          transform: translateZ(-1px) rotateX(180deg);
+  -webkit-transform: translateZ(-2px) rotateX(180deg);
+          transform: translateZ(-2px) rotateX(180deg);
   overflow: hidden;
   -webkit-transition: box-shadow 0.8s ease;
           transition: box-shadow 0.8s ease; }
@@ -118,8 +118,8 @@ body {
 
 .btn[data-direction="left"] .btn-back,
 .btn[data-direction="right"] .btn-back {
-  -webkit-transform: translateZ(-1px) rotateY(180deg);
-          transform: translateZ(-1px) rotateY(180deg); }
+  -webkit-transform: translateZ(-2px) rotateY(180deg);
+          transform: translateZ(-2px) rotateY(180deg); }
 
 .btn.is-open {
   width: 400px;
