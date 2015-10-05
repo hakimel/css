@@ -42,7 +42,8 @@ p {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-    .animation .device .phone-home-button, .animation .device .tablet-home-button {
+    .animation .device .phone-home-button,
+    .animation .device .tablet-home-button {
       position: absolute;
       border-radius: 50%;
       background: #444;
@@ -154,7 +155,8 @@ p {
     height: 38%;
     padding: 10px 36px;
     border-radius: 6px; }
-    .animation[data-animation-step="3"] .device .slide1, .animation[data-animation-step="3"] .device .slide2 {
+    .animation[data-animation-step="3"] .device .slide1,
+    .animation[data-animation-step="3"] .device .slide2 {
       left: -100%; }
     .animation[data-animation-step="3"] .device .slide3 {
       left: 0%; }
