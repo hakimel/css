@@ -1,6 +1,7 @@
 Assorted CSS and UI experiments from [@hakimel](http://twitter.com/hakimel).
 
 Live demos:
+- Kort http://lab.hakim.se/kort/
 - Cloudy Spiral http://lab.hakim.se/cloudy-spiral/
 - Flexing Pagination http://lab.hakim.se/flexing-pagination/
 - Device Loop http://lab.hakim.se/device-loop/
