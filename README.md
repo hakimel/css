@@ -7,5 +7,6 @@ Live demos:
 - Checkwave http://lab.hakim.se/checkwave/
 - Monocle List http://lab.hakim.se/monocle/
 - Flipside http://lab.hakim.se/flipside/
+- Progress Nav http://lab.hakim.se/progress-nav/
 
-Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+Copyright (C) 2016 Hakim El Hattab, http://hakim.se

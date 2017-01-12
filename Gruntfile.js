@@ -27,7 +27,8 @@ module.exports = function(grunt) {
 					'cloudy-spiral/style.css': 'cloudy-spiral/style.scss',
 					'checkwave/style.css': 'checkwave/style.scss',
 					'monocle/style.css': 'monocle/style.scss',
-					'flipside/style.css': 'flipside/style.scss'
+					'flipside/style.css': 'flipside/style.scss',
+					'progress-nav/style.css': 'progress-nav/style.scss'
 				}
 			}
 		},
@@ -36,7 +37,8 @@ module.exports = function(grunt) {
 			dist: {
 				files: [
 					{ src: 'flexing-pagination/style.css' },
-					{ src: 'flipside/style.css' }
+					{ src: 'flipside/style.css' },
+					{ src: 'progress-nav/style.css' }
 				]
 			}
 		},
