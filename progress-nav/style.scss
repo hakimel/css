@@ -12,7 +12,7 @@ body {
 }
 
 body {
-	padding: 2em 2em 2em $menuWidth+$menuPaddingLeft;
+	padding: 1em 2em 2em $menuWidth+$menuPaddingLeft;
 	font-size: 16px;
 	line-height: 1.6;
 
@@ -93,6 +93,11 @@ body {
 	h2
 	h3 {
 		padding-top: 1em;
+	}
+
+
+	h2 {
+		margin-top: 1.2em;
 	}
 }
 

@@ -69,6 +69,8 @@ body {
   .contents h2
 h3 {
     padding-top: 1em; }
+  .contents h2 {
+    margin-top: 1.2em; }
 
 @media screen and (max-width: 1200px) {
   body {

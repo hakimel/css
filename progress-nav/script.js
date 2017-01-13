@@ -48,7 +48,7 @@ window.onload = function() {
 
 			if( i === 0 ) {
 				path.push( 'M', x, y, 'L', x, y + height );
-				item.pathStart = tocPath.getTotalLength() || 0;
+				item.pathStart = 0;
 			}
 			else {
 				// Draw an additional line when there's a change in
@@ -81,7 +81,7 @@ window.onload = function() {
 
 		var windowHeight = window.innerHeight;
 
-		var pathStart = Number.MAX_VALUE,
+		var pathStart = pathLength,
 			pathEnd = 0;
 
 		var visibleItems = 0;
@@ -103,8 +103,6 @@ window.onload = function() {
 			}
 
 		} );
-
-		console.log(pathStart, pathEnd);
 
 		// Specify the visible path or hide the path altogether
 		// if there are no visible items
