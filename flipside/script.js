@@ -30,10 +30,15 @@ window.onload = function() {
 
 	btnYes.addEventListener( 'click', function( event ) {
 		btn.classList.remove( 'is-open' );
+		$('.btn-front').html("Deleted");
+		$('.description').html("Click to undo");
 	} );
 
 	btnNo.addEventListener( 'click', function( event ) {
 		btn.classList.remove( 'is-open' );
+				$('.btn-front').html("Delete");
+
+
 	} );
 
 	function distance( x1, y1, x2, y2 ) {
