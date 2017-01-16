@@ -4,6 +4,7 @@ Live demos:
 - Cloudy Spiral http://lab.hakim.se/cloudy-spiral/
 - Flexing Pagination http://lab.hakim.se/flexing-pagination/
 - Device Loop http://lab.hakim.se/device-loop/
+- Holobox http://lab.hakim.se/holobox/
 - Checkwave http://lab.hakim.se/checkwave/
 - Monocle List http://lab.hakim.se/monocle/
 - Flipside http://lab.hakim.se/flipside/
