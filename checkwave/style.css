@@ -7,10 +7,12 @@ html, body {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto; }
+  margin: auto;
+  zoom: 1.4; }
 
 input {
-  position: absolute; }
+  position: absolute;
+  will-change: transform; }
 
 input.grow {
   -webkit-animation: grow 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);

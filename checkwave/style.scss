@@ -9,10 +9,12 @@ html, body {
 	bottom: 0;
 	left: 0;
 	margin: auto;
+	zoom: 1.4;
 }
 
 input {
 	position: absolute;
+	will-change: transform;
 }
 
 input.grow {
