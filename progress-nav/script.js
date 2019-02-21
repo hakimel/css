@@ -11,6 +11,9 @@ window.onload = function() {
 
 	var pathLength;
 
+	var lastPathStart,
+		lastPathEnd;
+
 	window.addEventListener( 'resize', drawPath, false );
 	window.addEventListener( 'scroll', sync, false );
 
@@ -107,13 +110,18 @@ window.onload = function() {
 		// Specify the visible path or hide the path altogether
 		// if there are no visible items
 		if( visibleItems > 0 && pathStart < pathEnd ) {
-			tocPath.setAttribute( 'stroke-dashoffset', '1' );
-			tocPath.setAttribute( 'stroke-dasharray', '1, '+ pathStart +', '+ ( pathEnd - pathStart ) +', ' + pathLength );
-			tocPath.setAttribute( 'opacity', 1 );
+			if( pathStart !== lastPathStart || pathEnd !== lastPathEnd ) {
+				tocPath.setAttribute( 'stroke-dashoffset', '1' );
+				tocPath.setAttribute( 'stroke-dasharray', '1, '+ pathStart +', '+ ( pathEnd - pathStart ) +', ' + pathLength );
+				tocPath.setAttribute( 'opacity', 1 );
+			}
 		}
 		else {
 			tocPath.setAttribute( 'opacity', 0 );
 		}
+
+		lastPathStart = pathStart;
+		lastPathEnd = pathEnd;
 
 	}
 
