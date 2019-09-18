@@ -1,64 +1,59 @@
-window.onload = function() {
+window.onload = () => {
 
-	var wrapper = document.querySelector( '.page-wrapper' );
+	const wrapper = document.querySelector( '.page-wrapper' );
 
-	var originalList = document.querySelector( '.list-wrapper' );
-	var originalListItems = originalList.innerHTML;
+	const originalList = document.querySelector( '.list-wrapper' );
+	const originalListItems = originalList.innerHTML;
 	originalList.parentNode.removeChild( originalList );
 
 	// Top list
-	var listA = document.createElement( 'ul' );
+	const listA = document.createElement( 'ul' );
 	listA.className = 'list-wrapper list-a';
 	listA.innerHTML = originalListItems;
 	wrapper.appendChild( listA );
 
 	// Monocle list
-	var listB = document.createElement( 'ul' );
+	const listB = document.createElement( 'ul' );
 	listB.className = 'list-wrapper list-b';
 	listB.innerHTML = originalListItems;
 	wrapper.appendChild( listB );
 
 	// Bottom list
-	var listC = document.createElement( 'ul' );
+	const listC = document.createElement( 'ul' );
 	listC.className = 'list-wrapper list-c';
 	listC.innerHTML = originalListItems;
 	wrapper.appendChild( listC );
 
-	var listAInner = listA.querySelector( '.list' ),
-		listCInner = listC.querySelector( '.list' ),
-		listBInner = listB.querySelector( '.list' );
+	const listAInner = listA.querySelector( '.list' );
+	const listCInner = listC.querySelector( '.list' );
+	const listBInner = listB.querySelector( '.list' );
 
-	var scroller,
-		scrollPosition = 0;
+	const rowHeight = listA.querySelector( 'li' ).offsetHeight;
+	const listAScrollheight = listAInner.scrollHeight;
+	const listBScrollheight = listBInner.scrollHeight;
 
-	var rowHeight = listA.querySelector( 'li' ).offsetHeight;
-
-	var listAHeight = 0,
+	let listAHeight = 0,
 		listBHeight = rowHeight * 2,
 		listCHeight = 0;
 
-	var listAScrollheight = listAInner.scrollHeight,
-		listBScrollheight = listBInner.scrollHeight;
+	let scrollPosition = 0;
 
 	function init() {
 
 		window.addEventListener( 'resize', layout );
+		window.addEventListener( 'scroll', syncScrollPosition );
 
-		scroller = new IScroll( document.body, {
-			mouseWheel: true,
-			scrollbars: true,
-			probeType: 3
-		} );
-
-		scroller.on( 'scroll', onScrollUpdate );
+		wrapper.style.visibility = '';
 
 		layout();
+
+		syncScrollPosition();
 
 	}
 
 	function layout() {
 
-		var height = window.innerHeight;
+		let height = window.innerHeight;
 
 		listAHeight = ( height - listBHeight ) / 2;
 		listAHeight = Math.floor( listAHeight / rowHeight ) * rowHeight;
@@ -82,9 +77,11 @@ window.onload = function() {
 
 	}
 
-	function onScrollUpdate( event ) {
+	function syncScrollPosition( event ) {
 
-		scrollPosition = scroller.y / scroller.maxScrollY;
+		let scrollRange = document.documentElement.scrollHeight - document.documentElement.offsetHeight;
+
+		scrollPosition = window.scrollY / scrollRange;
 		scrollPosition = Math.max( 0, Math.min( 1, scrollPosition ) );
 
 		sync();

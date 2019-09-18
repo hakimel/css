@@ -11,24 +11,22 @@ $rounding: 6px;
 
 html, body {
 	height: 100%;
-	overflow: hidden;
+	width: 100%;
 	font-family: 'Roboto', Helvetica, sans-serif;
 	background-color: #222;
 	color: $textColor;
 }
 
-.page-scroller {
-	position: relative;
-	height: 500%; // arbitrary scroll height
-	z-index: 1;
+html {
+	overflow: auto;
+}
 
-	.list-wrapper {
-		display: none;
-	}
+body {
+	height: 500%;
 }
 
 .page-wrapper {
-	position: absolute;
+	position: fixed;
 	width: $rowWidth * 2;
 	height: 100%;
 	left: 50%;

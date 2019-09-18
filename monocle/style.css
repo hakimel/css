@@ -5,20 +5,19 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  width: 100%;
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: #222;
   color: #222; }
 
-.page-scroller {
-  position: relative;
-  height: 500%;
-  z-index: 1; }
-  .page-scroller .list-wrapper {
-    display: none; }
+html {
+  overflow: auto; }
+
+body {
+  height: 500%; }
 
 .page-wrapper {
-  position: absolute;
+  position: fixed;
   width: 840px;
   height: 100%;
   left: 50%;
