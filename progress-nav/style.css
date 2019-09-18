@@ -7,7 +7,7 @@ body {
   overflow: auto; }
 
 body {
-  padding: 2em 2em 2em 17em;
+  padding: 1em 2em 2em 17em;
   font-size: 16px;
   line-height: 1.6;
   font-family: 'Roboto', sans-serif; }
@@ -29,13 +29,10 @@ body {
     display: inline-block;
     color: #aaa;
     text-decoration: none;
-    -webkit-transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
   .toc li.visible > a {
     color: #111;
-    -webkit-transform: translate(5px);
-        -ms-transform: translate(5px);
-            transform: translate(5px); }
+    transform: translate(5px); }
 
 .toc-marker {
   position: absolute;
@@ -45,8 +42,7 @@ body {
   height: 100%;
   z-index: -1; }
   .toc-marker path {
-    -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease; }
+    transition: all 0.3s ease; }
 
 .contents {
   padding: 1em;

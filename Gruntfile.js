@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 /* global module:false */
 module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
@@ -20,6 +22,9 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+			options: {
+				implementation: sass
+			},
 			main: {
 				files: {
 					'device-loop/style.css': 'device-loop/style.scss',
