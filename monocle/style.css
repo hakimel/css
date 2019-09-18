@@ -8,7 +8,7 @@ html, body {
   overflow: hidden;
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: #222;
-  color: #fff; }
+  color: #222; }
 
 .page-scroller {
   position: relative;
@@ -19,13 +19,12 @@ html, body {
 
 .page-wrapper {
   position: absolute;
-  width: 640px;
+  width: 840px;
   height: 100%;
   left: 50%;
   top: 0;
-  margin-left: -320px;
+  margin-left: -420px;
   font-size: 16px;
-  overflow: hidden;
   z-index: 2; }
 
 .list-wrapper {
@@ -36,33 +35,38 @@ html, body {
 
 .list {
   position: relative;
-  width: 320px;
+  width: 420px;
   margin: 0 auto;
   padding: 0;
   list-style: none; }
   .list li {
     width: 100%;
-    height: 140px;
-    padding: 2.1em 1em; }
-    .list li * + * {
-      display: block;
-      margin-top: 0.4em; }
-    .list li h3 {
-      font-weight: 500; }
-    .list li a {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none; }
-    .list li p {
-      color: rgba(255, 255, 255, 0.7); }
-  .list li:nth-child(4n+1) {
-    background-color: #556270; }
-  .list li:nth-child(4n+2) {
-    background-color: #4ECDC4; }
-  .list li:nth-child(4n+3) {
-    background-color: #4e6d8a; }
-  .list li:nth-child(4n+4) {
-    background-color: #FF6B6B; }
+    height: 150px;
+    padding: 2.1em 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #eee; }
+  .list .project-figure {
+    width: 30%;
+    flex-shrink: 0;
+    margin-right: 1em; }
+  .list .project-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%; }
+  .list h3 {
+    margin-bottom: 4px; }
+  .list li:nth-child(even) {
+    background-color: #e5e5e5; }
+  .list li:nth-child(odd) {
+    background-color: #f5f5f5; }
+  .list li:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px; }
+  .list li:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px; }
 
 .list-a {
   top: 0; }
@@ -72,13 +76,12 @@ html, body {
 .list-b {
   z-index: 10;
   font-size: 2em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); }
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  border-radius: 6px; }
   .list-b .list {
-    width: 640px; }
+    width: 840px; }
   .list-b li {
-    height: 280px; }
-  .list-b li + li {
-    border-top: 1px solid rgba(255, 255, 255, 0.5); }
+    height: 300px; }
   .list-b li a {
     border-bottom: 1px dotted #fff; }
 
