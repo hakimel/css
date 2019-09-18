@@ -7,19 +7,19 @@ window.onload = () => {
 	originalList.parentNode.removeChild( originalList );
 
 	// Top list
-	const listA = document.createElement( 'ul' );
+	const listA = document.createElement( 'div' );
 	listA.className = 'list-wrapper list-a';
 	listA.innerHTML = originalListItems;
 	wrapper.appendChild( listA );
 
 	// Monocle list
-	const listB = document.createElement( 'ul' );
+	const listB = document.createElement( 'div' );
 	listB.className = 'list-wrapper list-b';
 	listB.innerHTML = originalListItems;
 	wrapper.appendChild( listB );
 
 	// Bottom list
-	const listC = document.createElement( 'ul' );
+	const listC = document.createElement( 'div' );
 	listC.className = 'list-wrapper list-c';
 	listC.innerHTML = originalListItems;
 	wrapper.appendChild( listC );
@@ -28,7 +28,7 @@ window.onload = () => {
 	const listCInner = listC.querySelector( '.list' );
 	const listBInner = listB.querySelector( '.list' );
 
-	const rowHeight = listA.querySelector( 'li' ).offsetHeight;
+	const rowHeight = listA.querySelector( '.list-item' ).offsetHeight;
 	const listAScrollheight = listAInner.scrollHeight;
 	const listBScrollheight = listBInner.scrollHeight;
 
