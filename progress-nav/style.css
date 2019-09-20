@@ -71,3 +71,16 @@ h3 {
 @media screen and (max-width: 1200px) {
   body {
     font-size: 14px; } }
+
+/*Highlighting visilbe area*/
+.toc .visible{
+      background: #e0e0e0;
+ }
+
+.toc .visible ul{
+     background: #fff;
+}
+
+.toc li:last-child .visible:last-child {
+    background-color: #ff0;
+}

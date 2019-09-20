@@ -90,3 +90,8 @@ button {
   font-size: 30px;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
   color: #fff; }
+
+  /*Highlighting visilbe area*/
+  .toc .visible{
+      background: #c5c5c5;
+  }
