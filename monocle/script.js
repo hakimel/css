@@ -6,6 +6,9 @@ window.onload = () => {
 	const originalListItems = originalList.innerHTML;
 	originalList.parentNode.removeChild( originalList );
 
+	// Body
+	const body = document.querySelector('body');
+
 	// Top list
 	const listA = document.createElement( 'div' );
 	listA.className = 'list-wrapper list-a';
@@ -42,6 +45,7 @@ window.onload = () => {
 
 		window.addEventListener( 'resize', layout );
 		window.addEventListener( 'scroll', syncScrollPosition );
+		window.addEventListener('scroll', changeBackground);
 
 		wrapper.style.visibility = '';
 
@@ -83,11 +87,25 @@ window.onload = () => {
 
 		scrollPosition = window.scrollY / scrollRange;
 		scrollPosition = Math.max( 0, Math.min( 1, scrollPosition ) );
-
 		sync();
 
 	}
 
+	function getColor() {
+		let color = "#" + Math.random().toString(16).slice(2, 8);
+		if(color.toLowerCase() === "#ffffff") {
+			getColor();
+		}
+		return color;
+	}
+
+	function changeBackground() {
+		let color = scrollPosition == 0 ? '#000000' : getColor();
+		body.style.background = color;
+	}
+
+	//console.log(body);
+	
 	init();
 
 };
