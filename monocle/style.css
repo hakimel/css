@@ -14,7 +14,9 @@ html {
   overflow: auto; }
 
 body {
-  height: 500%; }
+  height: 500%; 
+  transition: background-color 1s ease;
+}
 
 .page-wrapper {
   position: fixed;
