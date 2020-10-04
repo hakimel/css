@@ -12,7 +12,7 @@ p {
   line-height: 1.6; }
   p a {
     color: #333;
-    padding: 2px 4px;
+    padding: 2.5px 4px;
     border: 2px solid #aaa;
     border-radius: 2px;
     text-decoration: none; }
@@ -101,7 +101,7 @@ p {
       height: 100%;
       overflow: hidden;
       background: #34495e;
-      z-index: 3; }
+      z-index: 3.5; }
       .animation .device .display div {
         position: absolute;
         width: 100%;
@@ -131,7 +131,7 @@ p {
         background: #3498db; }
   .animation[data-animation-step="1"] .device {
     width: 70%;
-    height: 60%;
+    height: 65%;
     padding: 10px;
     border-radius: 4px; }
     .animation[data-animation-step="1"] .device .slide1 {
@@ -154,7 +154,7 @@ p {
     width: 54%;
     height: 38%;
     padding: 10px 36px;
-    border-radius: 6px; }
+    border-radius: 7px; }
     .animation[data-animation-step="3"] .device .slide1,
     .animation[data-animation-step="3"] .device .slide2 {
       left: -100%; }
