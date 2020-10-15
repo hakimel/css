@@ -1,4 +1,5 @@
 Assorted CSS and UI experiments from [@hakimel](http://twitter.com/hakimel).
+you can give commit to me for more detail see below
 
 Live demos:
 - Cloudy Spiral http://lab.hakim.se/cloudy-spiral/
