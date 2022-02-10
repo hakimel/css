@@ -21,7 +21,7 @@
     "grunt-contrib-connect": "~0.11.2",
     "grunt-autoprefixer": "~3.0.3",
     "grunt-sass": "~3.1.0",
-    "node-sass": "~4.12.0",
+    "node-sass": "~7.0.0",
     "grunt": "~1.0.1"
   }
 }
