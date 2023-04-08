@@ -20,9 +20,9 @@ html, body {
 i {
   display: block;
   position: absolute;
-  width: 8px;
+  width: 9px;
   height: 8px;
-  border-radius: 8px;
+  border-radius: 7px;
   opacity: 0;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 0px 10px white;
@@ -32,23 +32,23 @@ i {
   animation-timing-function: ease-in-out; }
 
 i:nth-child(1) {
-  transform: rotate(11.6129032258deg) translate3d(80px, 0, 0);
+  transform: rotate(11.6129032258deg) translate3d(75px, 0, 0);
   animation-delay: 0.0483870968s; }
 
 i:nth-child(2) {
-  transform: rotate(23.2258064516deg) translate3d(80px, 0, 0);
+  transform: rotate(23.2258064516deg) translate3d(75px, 0, 0);
   animation-delay: 0.0967741935s; }
 
 i:nth-child(3) {
-  transform: rotate(34.8387096774deg) translate3d(80px, 0, 0);
+  transform: rotate(34.8387096774deg) translate3d(75px, 0, 0);
   animation-delay: 0.1451612903s; }
 
 i:nth-child(4) {
-  transform: rotate(46.4516129032deg) translate3d(80px, 0, 0);
+  transform: rotate(46.4516129032deg) translate3d(75px, 0, 0);
   animation-delay: 0.1935483871s; }
 
 i:nth-child(5) {
-  transform: rotate(58.064516129deg) translate3d(80px, 0, 0);
+  transform: rotate(58.064516129deg) translate3d(75px, 0, 0);
   animation-delay: 0.2419354839s; }
 
 i:nth-child(6) {
