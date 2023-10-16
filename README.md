@@ -10,3 +10,5 @@ Live demos:
 - Progress Nav http://lab.hakim.se/progress-nav/
 
 Copyright (C) 2016 Hakim El Hattab, http://hakim.se
+
+By @hacki
