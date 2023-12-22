@@ -10,6 +10,7 @@ html, body {
   left: 0;
   margin: auto;
   zoom: 1.4;
+  background-color: aqua;
 }
 
 input {
